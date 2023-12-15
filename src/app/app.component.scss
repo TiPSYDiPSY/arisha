@@ -4,11 +4,11 @@
     grid-template-rows: repeat(5, auto);
     gap: 5px;
     padding: 50px;
-    border: 5px solid #000;
+    border: 5px none #000;
 }
 
 .item {
-  border: 5px solid rgba(0, 0, 0, 0.8);
+  border: 5px none rgba(0, 0, 0, 0.8);
   padding: 20px;
   text-align: center;
 
