@@ -1,33 +1,31 @@
 .container-heart {
-    display: flex; 
+    display: flex;
     background: linear-gradient(to bottom right, #5c4d7d, #42335c);
     border-radius: 15px;
-    padding: 10px; 
+    //padding: 10px;
 
     @media screen and (max-width: 840px) {
         flex-direction: column;
-        padding: 20px; 
     }
 }
 
 .item-landing {
-    flex: 1; 
-    display: flex; 
-    align-items: center; 
-    &.right {
-       
+    flex: 1;
+    display: flex;
+    align-items: center;
+  &.right {
         width: 50%;
-        flex-direction: column;  
+        flex-direction: column;
 
         @media screen and (max-width: 840px) {
-            width: 100%; 
+            width: 100%;
         }
     }
 
     &.left {
-        
+
         width: 50%;
-        flex-direction: column; 
+        flex-direction: column;
 
         @media screen and (max-width: 840px) {
             width: 100%;
@@ -45,7 +43,7 @@
 p {
     text-align: center;
     color: #eee2e2;
-    font-family: "MinecraftFont";
+  font-family: "MinecraftFont", serif;
 }
 
 @keyframes heartbeat {
