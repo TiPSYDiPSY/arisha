@@ -22,7 +22,7 @@ jobs:
         run: npm install --force
 
       - name: Build
-        run: ng build --output-path docs --base-href /arisha/ &&
+        run: npm run build &&
           cp docs/browser/index.html docs/browser/404.html &&
           move docs\browser\* docs\ &&
           rm -rf docs/browser 3rdpartylicenses.txt
