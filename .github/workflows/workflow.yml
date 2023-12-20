@@ -9,15 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages-angular
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    permissions:
-      pages: write
-      id-token: write
-      actions: read
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -31,8 +22,12 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
-
+        run: ng build --output-path docs --base-href /arisha/ &&
+          cp docs/browser/index.html docs/browser/404.html &&
+          move docs\browser\* docs\ &&
+          rm -rf docs/browser 3rdpartylicenses.txt
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: github-pages-angular
+          folder: docs/browser
