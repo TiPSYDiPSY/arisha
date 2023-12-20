@@ -1,6 +1,6 @@
 .nes-btn {
     width: 50%;
-    font-family: "MinecraftFont";
+    font-family: "MinecraftFont", serif;
 }
 
 
@@ -21,7 +21,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
-    font-family: "MinecraftFont";
+    font-family: "MinecraftFont", serif;
     padding: 10px;
   }
 
@@ -30,10 +30,10 @@
     color: #fff;
     width: 20%;
   }
-  
+
   .dialog-content {
     padding: 10px;
     font-size: 18px;
-    font-family: "MinecraftFont";
-    text-align: left; 
+    font-family: "MinecraftFont", serif;
+    text-align: left;
   }
