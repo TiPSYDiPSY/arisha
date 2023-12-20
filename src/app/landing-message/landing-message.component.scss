@@ -2,7 +2,7 @@
     display: flex;
     background: linear-gradient(to bottom right, #5c4d7d, #42335c);
     border-radius: 15px;
-    //padding: 10px;
+    padding: 10px;
 
     @media screen and (max-width: 840px) {
         flex-direction: column;
