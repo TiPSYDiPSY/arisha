@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: npm run build &&
           cp docs/browser/index.html docs/browser/404.html &&
-          move docs\browser\* docs\ &&
+          mv docs\browser\* docs\ &&
           rm -rf docs/browser 3rdpartylicenses.txt
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
