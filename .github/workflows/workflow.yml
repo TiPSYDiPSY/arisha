@@ -9,6 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages-angular
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+      actions: read
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -25,8 +34,5 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: github-pages-angular
+        id: deployment
+        uses: actions/deploy-pages@v4
